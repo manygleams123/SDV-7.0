@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './Gallery.css';
 
-import SAE1 from "../ASSETS/GalleryImages/SDVIMG1.JPG";
+/*import SAE1 from "../ASSETS/GalleryImages/SDVIMG1.JPG";
 import SAE2 from "../ASSETS/GalleryImages/SDVIMG2.JPG";
 import SAE3 from "../ASSETS/GalleryImages/SDVIMG3.JPG";
 import SAE4 from "../ASSETS/GalleryImages/SDVIMG4.JPG";
@@ -30,14 +30,13 @@ import SAE26 from "../ASSETS/GalleryImages/SDVIMG26.JPG";
 import SAE27 from "../ASSETS/GalleryImages/SDVIMG27.JPG";
 import SAE28 from "../ASSETS/GalleryImages/SDVIMG28.JPG";
 import SAE29 from "../ASSETS/GalleryImages/SDVIMG29.JPG";
-import SAE30 from "../ASSETS/GalleryImages/SDVIMG30.JPG";
+import SAE30 from "../ASSETS/GalleryImages/SDVIMG30.JPG";*/
 
 const Gallery = () => {
-  const images = [
-    SAE1, SAE2, SAE3, SAE4, SAE5, SAE6, SAE7, SAE8, SAE9, SAE10,
-    SAE11, SAE12, SAE13, SAE14, SAE15, SAE16, SAE17, SAE18, SAE19, SAE20,
-    SAE21, SAE22, SAE23, SAE24, SAE25, SAE26, SAE27, SAE28, SAE29, SAE30
-  ];
+  const images = Array.from({ length: 30 }, (_, i) =>
+  `/GalleryImages/SDVIMG${i + 1}.JPG`
+);
+
 
   const [expandedImage, setExpandedImage] = useState(null);
 
